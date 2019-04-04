@@ -1,4 +1,5 @@
-library(tidyverse)
+library(dplyr)
+library(lubridate)
 library(shiny)
 library(shinyWidgets)
 library(plotly)
@@ -54,11 +55,11 @@ chinook_dropoff_locations <- tribble(
 chinook_routing_points <- tribble(
   ~"lat", ~"lng", ~"location", ~"location_id",
   38.309739, -121.576109, "Sutter @ Sac R", "Sut.in.Sac",
-  38.304908, -121.599392, "Sutter @ Sutter", "Sut.in.Sut",
+  38.304908, -121.599392, "Sutter/Steamboat", "Sut.in.Sut",
   38.244720, -121.503385, "Junction @ DCC", "Junc.in.DCC",
   38.232174, -121.521133, "Junction @ Georgiana Slough", "Junc.in.GeoSlo",
   38.254235, -121.513459, "Junction @ Sac R", "Junc.in.Sac",
-  37.990010, -121.458557, "Turner Cut at Turner Cut Junction", "at.TC.TC",
+  37.990010, -121.458557, "Turner Cut @ Turner Cut Junction", "at.TC.TC",
   38.003133, -121.450741, "San Joaquin River at Turner Cut Junction", "at.TC.SJR",
   37.807879, -121.331900, "Old River at HOD", "at.HOR.OR",
   37.811096, -121.320068, "San Joaquin at HOD", "at.HOR.SJR",

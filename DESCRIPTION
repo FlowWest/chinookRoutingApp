@@ -10,4 +10,11 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    shiny
+    shiny,
+    dplyr,
+    shinyWidgets,
+    plotly,
+    leaflet,
+    rgdal,
+    DT,
+    lubridate

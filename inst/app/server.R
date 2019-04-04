@@ -112,10 +112,13 @@ function(input, output, session) {
 
     chinook_routing() %>%
       plot_ly(x=~location, y=~value, type='bar',
+              marker = list(color = "#424242"),
               text = ~paste0("<b>Proportion:</b> ", round(proportion_at_location, 3), "<br>",
                              "<b>Total:</b> ", value),
               hoverinfo = "text") %>%
-      layout(xaxis = list(title=""), yaxis=list(range = plot_range())) #TODO: grab the largest of the two inputs in this section
+      layout(xaxis = list(title=""),
+             yaxis=list(title="Survival",
+                        range = plot_range())) #TODO: grab the largest of the two inputs in this section
 
   })
 
