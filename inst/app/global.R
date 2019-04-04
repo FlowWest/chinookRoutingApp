@@ -266,27 +266,27 @@ consequence_choices <- c(
   "Chinook Salmon"
 )
 
-delta_regions <- readOGR(dsn="data/Hydro_Delta_FromBen/hydro_CH2MHill_DP2013_merged_dslv_Delta_clp.shp")%>%
-  spTransform(CRS("+proj=longlat +datum=WGS84 +no_defs"))
-
-chinook_regions <- readOGR(dsn="data/Regions1to7/") %>%
-  spTransform(CRS("+proj=longlat +datum=WGS84 +no_defs"))
-
-chinook_regions$Id <- factor(c(7, 4, 3, 5, 6, 2, 1),
-                             levels = c(7, 4, 3, 5, 6, 2, 1),
-                             labels = c("Region 7",
-                                        "Region 4",
-                                        "Region 3",
-                                        "Region 5",
-                                        "Region 6",
-                                        "Region 2",
-                                        "Region 1"))
-
-chinook_dropoff_locations <- tribble(
-  ~"location", ~"lat", ~"lng",
-  "Vernalis", 37.67604, -121.2663,
-  "Freeport", 38.461045, -121.503570
-)
+# delta_regions <- readOGR(dsn="data/Hydro_Delta_FromBen/hydro_CH2MHill_DP2013_merged_dslv_Delta_clp.shp")%>%
+#   spTransform(CRS("+proj=longlat +datum=WGS84 +no_defs"))
+#
+# chinook_regions <- readOGR(dsn="data/Regions1to7/") %>%
+#   spTransform(CRS("+proj=longlat +datum=WGS84 +no_defs"))
+#
+# chinook_regions$Id <- factor(c(7, 4, 3, 5, 6, 2, 1),
+#                              levels = c(7, 4, 3, 5, 6, 2, 1),
+#                              labels = c("Region 7",
+#                                         "Region 4",
+#                                         "Region 3",
+#                                         "Region 5",
+#                                         "Region 6",
+#                                         "Region 2",
+#                                         "Region 1"))
+#
+# chinook_dropoff_locations <- tribble(
+#   ~"location", ~"lat", ~"lng",
+#   "Vernalis", 37.67604, -121.2663,
+#   "Freeport", 38.461045, -121.503570
+# )
 
 
 chinook_routing_points <- tribble(

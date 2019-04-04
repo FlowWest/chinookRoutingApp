@@ -21,7 +21,7 @@ function(input, output, session) {
       clearGroup("selected_points")
   })
 
-  cmap <- colorFactor("Dark2", domain = chinook_regions$Id)
+  # cmap <- colorFactor("Dark2", domain = chinook_regions$Id)
 
   # NOTE: these need to be refactored...
   # chinook_routing <- reactiveVal(NULL)
