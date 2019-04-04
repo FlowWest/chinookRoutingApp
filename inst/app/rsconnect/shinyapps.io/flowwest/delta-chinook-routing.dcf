@@ -1,0 +1,12 @@
+name: delta-chinook-routing
+title: delta-chinook-routing
+username:
+account: flowwest
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 837175
+bundleId: 1987008
+url: https://flowwest.shinyapps.io/delta-chinook-routing/
+when: 1554398456.76734
+asMultiple: FALSE
+asStatic: FALSE

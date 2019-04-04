@@ -29,7 +29,7 @@ function(input, output, session) {
 
 
   chinook_routing <- reactive({
-    chinookRoutingApp::DeltaS(
+    DeltaS(
       as.numeric(input$dcc_open),
       as.numeric(input$hor_barr),
       as.numeric(input$bio_fence),
