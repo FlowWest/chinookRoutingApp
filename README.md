@@ -13,4 +13,4 @@ chinookRoutingApp::launch_app()
 ```
 
 
-![demo][https://github.com/FlowWest/chinookRoutingApp/blob/master/demo.gif]
+![demo](demo.gif)
