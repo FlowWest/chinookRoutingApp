@@ -85,12 +85,17 @@ function(input, output, session) {
       #                  fillColor = "#ffad33", color="#ffad33",
       #                  fillOpacity = .6, label=~location) %>%
       addCircleMarkers(
-                       label=~paste(location_id),
+                       label=~paste(location),
                        weight=1, fillOpacity = .8,
                        layerId = ~location_id,
                        group = "Routing Points",
-                       fillColor = ~pal(value)
-                       ) %>%
+                       fillColor = ~pal(value),
+                       popup = ~paste0(
+                         "<b> Total Survival: ", value, "</b><br>",
+                         "<b> Proportion: ", round(proportion_at_location, 3), "</b><br>",
+                         "<b> Percent: ", round(percent_at_location, 2), "%</b><br>"
+                       )
+      ) %>%
       addLegend(
         "bottomright",
         pal = pal,
@@ -143,40 +148,41 @@ function(input, output, session) {
     ))
   })
 
-  observeEvent({
-    as.numeric(input$dcc_open)
-    as.numeric(input$hor_barr)
-    as.numeric(input$bio_fence)
-    input$q_free
-    input$q_vern
-    input$q_stck
-    input$temp_vern
-    input$temp_pp
-    input$cvp_exp
-    input$swp_exp
-    input$fish_above_freeport
-    input$fish_above_vernalis
-    input$fl
-  }, {
-    pal <- colorNumeric("YlGnBu", domain = chinook_routing()$value)
-
-    leafletProxy("chinook_routing_map", data=chinook_routing()) %>%
-      clearGroup("Routing Points") %>%
-      clearControls() %>%
-      clearMarkers() %>%
-      addCircleMarkers(
-        label=~paste(location_id),
-        weight=1, fillOpacity = .8,
-        layerId = ~location_id,
-        group = "Routing Points",
-        fillColor = ~pal(value)
-      ) %>%
-      addLegend(
-        "bottomright",
-        pal = pal,
-        values = ~ value,
-        group = "Routing Points"
-      )
-  }, ignoreInit = TRUE)
+  # observeEvent({
+  #   as.numeric(input$dcc_open)
+  #   as.numeric(input$hor_barr)
+  #   as.numeric(input$bio_fence)
+  #   input$q_free
+  #   input$q_vern
+  #   input$q_stck
+  #   input$temp_vern
+  #   input$temp_pp
+  #   input$cvp_exp
+  #   input$swp_exp
+  #   input$fish_above_freeport
+  #   input$fish_above_vernalis
+  #   input$fl
+  # }, {
+  #   pal <- colorNumeric("YlGnBu", domain = chinook_routing()$value)
+  #
+  #   leafletProxy("chinook_routing_map", data=chinook_routing()) %>%
+  #     clearGroup("Routing Points") %>%
+  #     clearControls() %>%
+  #     clearPopups() %>%
+  #     clearMarkers() %>%
+  #     addCircleMarkers(
+  #       label=~paste(location_id),
+  #       weight=1, fillOpacity = .8,
+  #       layerId = ~location_id,
+  #       group = "Routing Points",
+  #       fillColor = ~pal(value)
+  #     ) %>%
+  #     addLegend(
+  #       "bottomright",
+  #       pal = pal,
+  #       values = ~ value,
+  #       group = "Routing Points"
+  #     )
+  # }, ignoreInit = TRUE)
 
 }

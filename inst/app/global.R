@@ -57,7 +57,7 @@ chinook_routing_points <- tribble(
   38.309739, -121.576109, "Sutter @ Sac R", "Sut.in.Sac",
   38.304908, -121.599392, "Sutter/Steamboat", "Sut.in.Sut",
   38.244720, -121.503385, "Junction @ DCC", "Junc.in.DCC",
-  38.232174, -121.521133, "Junction @ Georgiana Slough", "Junc.in.GeoSlo",
+  38.232174, -121.521133, "Junction @ GeoSlo", "Junc.in.GeoSlo",
   38.254235, -121.513459, "Junction @ Sac R", "Junc.in.Sac",
   37.990010, -121.458557, "Turner Cut @ Turner Cut Junction", "at.TC.TC",
   38.003133, -121.450741, "San Joaquin River at Turner Cut Junction", "at.TC.SJR",
