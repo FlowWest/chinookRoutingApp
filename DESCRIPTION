@@ -19,4 +19,5 @@ Imports:
     DT,
     lubridate,
     readr,
-    forcats
+    forcats,
+    shinythemes
