@@ -17,4 +17,5 @@ Imports:
     leaflet,
     rgdal,
     DT,
-    lubridate
+    lubridate,
+    readr
