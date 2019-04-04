@@ -7,6 +7,7 @@ library(leaflet)
 library(rgdal)
 library(DT)
 library(readr)
+library(forcats)
 
 #==================================================================================
 

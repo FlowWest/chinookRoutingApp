@@ -18,4 +18,5 @@ Imports:
     rgdal,
     DT,
     lubridate,
-    readr
+    readr,
+    forcats
