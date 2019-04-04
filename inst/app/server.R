@@ -162,7 +162,7 @@ function(input, output, session) {
   #   input$fish_above_freeport
   #   input$fish_above_vernalis
   #   input$fl
-  # }, {
+  # },{
   #   pal <- colorNumeric("YlGnBu", domain = chinook_routing()$value)
   #
   #   leafletProxy("chinook_routing_map", data=chinook_routing()) %>%
