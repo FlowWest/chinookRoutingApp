@@ -1,0 +1,21 @@
+form.well {
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.selectize-control {
+    text-align: center;
+}
+
+.show-details {
+    margin-bottom: 5px;
+}
+
+.shiny-output-error-validation {
+    color: #3a3a3a;
+}
+
+.routing-help-button {
+    border-radius: 20%;
+}
+
