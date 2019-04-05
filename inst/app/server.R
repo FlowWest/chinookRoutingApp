@@ -99,6 +99,7 @@ function(input, output, session) {
       ) %>%
       addLegend(
         "bottomright",
+        title = "Survival",
         pal = pal,
         values = ~ value,
         group = "Routing Points"

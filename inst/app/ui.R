@@ -88,7 +88,7 @@ fluidPage(
       tabsetPanel(
         type = "pills",
         tabPanel("Plot",plotlyOutput("chinook_routing_plot", height = "450px")),
-        tabPanel("Data", DT::dataTableOutput("chinook_routing_table"))
+        tabPanel("Table", DT::dataTableOutput("chinook_routing_table"))
       )
     )
   )
