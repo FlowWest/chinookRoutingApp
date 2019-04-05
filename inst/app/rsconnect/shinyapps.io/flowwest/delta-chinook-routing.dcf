@@ -5,8 +5,8 @@ account: flowwest
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 837175
-bundleId: 1987027
+bundleId: 1990297
 url: https://flowwest.shinyapps.io/delta-chinook-routing/
-when: 1554399039.91603
+when: 1554500512.86885
 asMultiple: FALSE
 asStatic: FALSE

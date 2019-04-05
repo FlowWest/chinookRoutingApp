@@ -19,9 +19,7 @@ fluidPage(
                           affecting survival through routes in the delta. Parameters
                           are described below:"),
                    tags$br(),
-                   tags$h5("Additional Options"),
-                   tags$p("Apart from paremters options, there are additional features for
-                          the visualizations available.")
+                   helpText("Questions and feedback should be emailed to Emanuel Rodriguez at erodriguez@flowwest.com")
                  )
         ),
         tabPanel("Dash",

@@ -91,6 +91,7 @@ function(input, output, session) {
                        group = "Routing Points",
                        fillColor = ~pal(value),
                        popup = ~paste0(
+                         "<b><center>", location, "</b></center><br>",
                          "<b> Total Survival: ", value, "</b><br>",
                          "<b> Proportion: ", round(proportion_at_location, 3), "</b><br>",
                          "<b> Percent: ", round(percent_at_location, 2), "%</b><br>"
